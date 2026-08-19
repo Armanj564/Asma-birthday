@@ -1,0 +1,30 @@
+*{box-sizing:border-box}
+:root{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;color:#fff;background:#080817}
+html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#080817}
+body{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+#app{position:relative;z-index:2;width:100%;height:100%;padding:env(safe-area-inset-top) 18px env(safe-area-inset-bottom);display:grid;place-items:center}
+.screen{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;opacity:0;visibility:hidden;transform:scale(.985);transition:opacity .7s ease,transform .9s cubic-bezier(.2,.8,.2,1),visibility .7s}
+.screen.active{opacity:1;visibility:visible;transform:scale(1)}
+#welcome{align-content:center}
+.orb{position:absolute;width:min(75vw,420px);height:min(75vw,420px);border-radius:50%;background:radial-gradient(circle,rgba(186,151,255,.20),rgba(100,75,190,.08) 42%,transparent 70%);filter:blur(10px);animation:float 5s ease-in-out infinite;pointer-events:none}
+.eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:11px;opacity:.68;margin:0 0 16px}
+h1{font-size:clamp(48px,15vw,86px);line-height:.95;margin:0;font-weight:700;letter-spacing:-.05em}
+h1 span,h2 span{background:linear-gradient(120deg,#fff,#d8c6ff,#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{max-width:390px;margin:20px auto 34px;color:rgba(255,255,255,.67);font-size:15px;line-height:1.6}
+button{font:inherit;border:0;cursor:pointer}
+.primary{position:relative;padding:15px 25px;border-radius:999px;color:#11111e;background:#fff;box-shadow:0 12px 40px rgba(255,255,255,.16);font-size:13px;font-weight:800;letter-spacing:.15em;transition:transform .2s ease,box-shadow .2s ease}
+.primary span{margin-left:8px}
+.primary:active,.secondary:active{transform:scale(.96)}
+.card{width:min(92vw,480px);padding:34px 25px 30px;border:1px solid rgba(255,255,255,.14);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.035));box-shadow:0 30px 100px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.08);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.mini-stars{font-size:13px;letter-spacing:.2em;opacity:.55;margin-bottom:22px}
+h2{font-size:clamp(34px,10vw,58px);line-height:1.02;letter-spacing:-.045em;margin:0}
+.age{font-size:clamp(70px,22vw,110px);font-weight:800;line-height:.95;margin:20px 0 12px;background:linear-gradient(180deg,#fff,#bca6ff);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 50px rgba(182,154,255,.2)}
+.message{color:rgba(255,255,255,.68);line-height:1.55;font-size:14px;margin:0 0 25px}
+.secondary{padding:13px 19px;border-radius:999px;color:#fff;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.17);font-size:11px;font-weight:800;letter-spacing:.14em;transition:transform .2s ease,background .2s ease}
+.tiny{position:absolute;bottom:max(20px,env(safe-area-inset-bottom));font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.35)}
+.install-tip{position:fixed;z-index:10;left:14px;right:14px;bottom:max(14px,env(safe-area-inset-bottom));padding:17px 45px 17px 18px;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:rgba(18,18,38,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 15px 50px rgba(0,0,0,.35);font-size:13px}
+.install-tip p{margin:5px 0 0;color:rgba(255,255,255,.62);line-height:1.4}
+.tip-close{position:absolute;right:10px;top:8px;background:none;color:#fff;font-size:25px;opacity:.65}
+@keyframes float{50%{transform:translateY(-12px) scale(1.03)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}

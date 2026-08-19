@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#09091a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Asuma">
+  <meta name="description" content="A little birthday surprise.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Asuma ✨</title>
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+
+  <main id="app">
+    <section id="welcome" class="screen active">
+      <div class="orb"></div>
+      <p class="eyebrow">A little surprise ✨</p>
+      <h1>For <span>Asma</span></h1>
+      <p class="sub">Something small, bright, and made especially for today.</p>
+      <button id="openBtn" class="primary" type="button">OPEN <span>✦</span></button>
+    </section>
+
+    <section id="birthday" class="screen" aria-hidden="true">
+      <div class="burst" aria-hidden="true"></div>
+      <div class="card">
+        <div class="mini-stars">✦　·　✧　·　✦</div>
+        <p class="eyebrow">19 · 08 · 2026</p>
+        <h2>Happy Birthday,<br><span>Asma</span> ✨</h2>
+        <div class="age">16</div>
+        <p class="message">Wishing you a beautiful day<br>filled with bright little moments.</p>
+        <button id="wishBtn" class="secondary" type="button">MAKE A WISH ✦</button>
+      </div>
+      <p class="tiny">Made as a little birthday surprise.</p>
+    </section>
+  </main>
+
+  <div id="installTip" class="install-tip" hidden>
+    <button id="closeTip" class="tip-close" aria-label="Close">×</button>
+    <strong>Keep Asuma ✨</strong>
+    <p>On iPhone/iPad: tap <b>Share</b> → <b>Add to Home Screen</b>.</p>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
